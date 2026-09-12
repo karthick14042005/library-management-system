@@ -168,19 +168,19 @@
       "id": "iss_1",
       "bookId": "bk_1",
       "userId": "usr_user_1",
-      "issueDate": "2026-08-23T03:56:43.203Z",
-      "dueDate": "2026-09-06T03:56:43.203Z",
+      "issueDate": "2026-08-23T03:57:08.350Z",
+      "dueDate": "2026-09-06T03:57:08.350Z",
       "returnDate": null,
       "status": "OVERDUE",
       "calculatedFine": 35,
-      "finePaid": false
+      "finePaid": true
     },
     {
       "id": "iss_2",
       "bookId": "bk_2",
       "userId": "usr_user_2",
-      "issueDate": "2026-09-08T03:56:43.203Z",
-      "dueDate": "2026-09-22T03:56:43.203Z",
+      "issueDate": "2026-09-08T03:57:08.350Z",
+      "dueDate": "2026-09-22T03:57:08.350Z",
       "returnDate": null,
       "status": "ISSUED",
       "calculatedFine": 0,
@@ -190,8 +190,8 @@
       "id": "iss_3",
       "bookId": "bk_3",
       "userId": "usr_user_1",
-      "issueDate": "2026-09-10T03:56:43.203Z",
-      "dueDate": "2026-09-24T03:56:43.203Z",
+      "issueDate": "2026-09-10T03:57:08.350Z",
+      "dueDate": "2026-09-24T03:57:08.350Z",
       "returnDate": null,
       "status": "ISSUED",
       "calculatedFine": 0,
@@ -201,8 +201,8 @@
       "id": "iss_4",
       "bookId": "bk_3",
       "userId": "usr_user_3",
-      "issueDate": "2026-08-28T03:56:43.203Z",
-      "dueDate": "2026-09-11T03:56:43.203Z",
+      "issueDate": "2026-08-28T03:57:08.350Z",
+      "dueDate": "2026-09-11T03:57:08.350Z",
       "returnDate": null,
       "status": "OVERDUE",
       "calculatedFine": 10,
@@ -217,9 +217,9 @@
       "bookId": "bk_1",
       "amount": 35,
       "daysOverdue": 7,
-      "status": "UNPAID",
-      "createdAt": "2026-09-06T03:56:43.203Z",
-      "paidAt": null
+      "status": "PAID",
+      "createdAt": "2026-09-06T03:57:08.350Z",
+      "paidAt": "2026-09-12T05:18:23.958Z"
     },
     {
       "id": "fn_2",
@@ -229,18 +229,18 @@
       "amount": 15,
       "daysOverdue": 3,
       "status": "PAID",
-      "createdAt": "2026-08-13T03:56:43.203Z",
-      "paidAt": "2026-08-15T03:56:43.203Z"
+      "createdAt": "2026-08-13T03:57:08.350Z",
+      "paidAt": "2026-08-15T03:57:08.350Z"
     },
     {
-      "id": "fn_1789185403204_d9sd",
+      "id": "fn_1789186750136_q3o3",
       "issueId": "iss_4",
       "userId": "usr_user_3",
       "bookId": "bk_3",
       "amount": 10,
       "daysOverdue": 2,
       "status": "UNPAID",
-      "createdAt": "2026-09-12T03:56:43.204Z"
+      "createdAt": "2026-09-12T04:19:10.136Z"
     }
   ],
   "reservations": [
@@ -248,7 +248,7 @@
       "id": "res_1",
       "bookId": "bk_3",
       "userId": "usr_user_2",
-      "reservationDate": "2026-09-11T03:56:43.203Z",
+      "reservationDate": "2026-09-11T03:57:08.350Z",
       "status": "PENDING",
       "queuePosition": 1
     }
@@ -265,7 +265,7 @@
       "status": "PENDING",
       "adminReply": null,
       "repliedAt": null,
-      "createdAt": "2026-09-09T03:56:43.203Z"
+      "createdAt": "2026-09-09T03:57:08.350Z"
     },
     {
       "id": "qry_2",
@@ -277,8 +277,8 @@
       "message": "Are the reading rooms and Wi-Fi facilities open on Sunday evenings during semester finals?",
       "status": "RESOLVED",
       "adminReply": "Yes Priya! The digital reading room remains accessible until 9:00 PM on all weekends during final exams.",
-      "repliedAt": "2026-09-11T03:56:43.203Z",
-      "createdAt": "2026-09-07T03:56:43.203Z"
+      "repliedAt": "2026-09-11T03:57:08.350Z",
+      "createdAt": "2026-09-07T03:57:08.350Z"
     }
   ]
 }

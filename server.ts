@@ -401,7 +401,20 @@ async function startServer() {
   // Vite middleware setup
   if (process.env.NODE_ENV !== 'production') {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+        watch: {
+          ignored: [
+            '**/data/**',
+            '**/java-backend/**',
+            '**/*.json',
+            '**/*.log',
+            '**/target/**',
+            '**/dist/**',
+            '**/.git/**',
+          ],
+        },
+      },
       appType: 'spa',
     });
     app.use(vite.middlewares);
@@ -414,7 +427,11 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Digital Library System server running on http://0.0.0.0:${PORT}`);
+    console.log(`\n======================================================`);
+    console.log(`🚀 Digital Library System is running!`);
+    console.log(`👉 Local:   http://localhost:${PORT}`);
+    console.log(`👉 Network: http://127.0.0.1:${PORT}`);
+    console.log(`======================================================\n`);
   });
 }
 

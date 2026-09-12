@@ -129,7 +129,7 @@ export default function App() {
     } catch (err: any) {
       console.error('Error loading library data:', err);
     }
-  }, [currentUser, selectedCategory, searchQuery, availableOnly]);
+  }, [currentUser?.id, currentUser?.role, selectedCategory, searchQuery, availableOnly]);
 
   useEffect(() => {
     loadAllData();

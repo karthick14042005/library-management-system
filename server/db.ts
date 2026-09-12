@@ -342,27 +342,37 @@ class DatabaseManager {
     return new Date(base.getTime() + offsetMs);
   }
 
-  public recalculateOverdueAndFines() {
+  public recalculateOverdueAndFines(persist: boolean = false) {
     const now = this.getEffectiveNow();
     const fineRate = this.db.config.finePerDay || 5;
+    let changed = false;
 
     for (const issue of this.db.issues) {
       if (issue.status === 'RETURNED') continue;
 
       const dueDate = new Date(issue.dueDate);
       if (now > dueDate) {
-        issue.status = 'OVERDUE';
+        if (issue.status !== 'OVERDUE') {
+          issue.status = 'OVERDUE';
+          changed = true;
+        }
         const diffMs = now.getTime() - dueDate.getTime();
         const daysOverdue = Math.max(1, Math.ceil(diffMs / (1000 * 60 * 60 * 24)));
         const fineAmount = daysOverdue * fineRate;
-        issue.calculatedFine = fineAmount;
+        if (issue.calculatedFine !== fineAmount) {
+          issue.calculatedFine = fineAmount;
+          changed = true;
+        }
 
         // Upsert fine in fines table
         const existingFine = this.db.fines.find((f) => f.issueId === issue.id);
         if (existingFine) {
           if (existingFine.status === 'UNPAID') {
-            existingFine.amount = fineAmount;
-            existingFine.daysOverdue = daysOverdue;
+            if (existingFine.amount !== fineAmount || existingFine.daysOverdue !== daysOverdue) {
+              existingFine.amount = fineAmount;
+              existingFine.daysOverdue = daysOverdue;
+              changed = true;
+            }
           }
         } else {
           this.db.fines.push({
@@ -375,13 +385,22 @@ class DatabaseManager {
             status: 'UNPAID',
             createdAt: now.toISOString(),
           });
+          changed = true;
         }
       } else {
-        issue.status = 'ISSUED';
-        issue.calculatedFine = 0;
+        if (issue.status !== 'ISSUED') {
+          issue.status = 'ISSUED';
+          changed = true;
+        }
+        if (issue.calculatedFine !== 0) {
+          issue.calculatedFine = 0;
+          changed = true;
+        }
       }
     }
-    this.saveToDisk();
+    if (persist && changed) {
+      this.saveToDisk();
+    }
   }
 
   // --- CONFIG / TIME SIMULATION ---
