@@ -1,0 +1,284 @@
+{
+  "config": {
+    "virtualDaysOffset": 0,
+    "finePerDay": 5
+  },
+  "users": [
+    {
+      "id": "usr_admin_1",
+      "memberId": "LIB-ADM-001",
+      "name": "Chief Librarian Sarah Jenkins",
+      "email": "admin@library.gov",
+      "password": "admin123",
+      "role": "ADMIN",
+      "phone": "+91 98765 43210",
+      "status": "ACTIVE",
+      "joinedAt": "2025-01-10T09:00:00.000Z"
+    },
+    {
+      "id": "usr_user_1",
+      "memberId": "LIB-MEM-101",
+      "name": "Rohit Sharma",
+      "email": "rohit@example.com",
+      "password": "user123",
+      "role": "USER",
+      "phone": "+91 98111 22334",
+      "status": "ACTIVE",
+      "joinedAt": "2025-03-15T14:30:00.000Z"
+    },
+    {
+      "id": "usr_user_2",
+      "memberId": "LIB-MEM-102",
+      "name": "Priya Nair",
+      "email": "priya@example.com",
+      "password": "user123",
+      "role": "USER",
+      "phone": "+91 98222 33445",
+      "status": "ACTIVE",
+      "joinedAt": "2025-04-02T11:15:00.000Z"
+    },
+    {
+      "id": "usr_user_3",
+      "memberId": "LIB-MEM-103",
+      "name": "Arjun Verma",
+      "email": "arjun@example.com",
+      "password": "user123",
+      "role": "USER",
+      "phone": "+91 98333 44556",
+      "status": "SUSPENDED",
+      "joinedAt": "2025-05-18T16:45:00.000Z"
+    }
+  ],
+  "books": [
+    {
+      "id": "bk_1",
+      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+      "author": "Robert C. Martin",
+      "isbn": "978-0132350884",
+      "category": "Computer Science",
+      "quantity": 5,
+      "availableQuantity": 3,
+      "shelfLocation": "Rack CS-101",
+      "description": "Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code.",
+      "publishedYear": 2008,
+      "coverUrl": "https://images.unsplash.com/photo-1532012164546-f432f2e3ddb5?w=600&auto=format&fit=crop&q=80",
+      "createdAt": "2025-01-15T10:00:00.000Z"
+    },
+    {
+      "id": "bk_2",
+      "title": "Introduction to Algorithms (CLRS)",
+      "author": "Thomas H. Cormen, Charles E. Leiserson",
+      "isbn": "978-0262033848",
+      "category": "Computer Science",
+      "quantity": 4,
+      "availableQuantity": 2,
+      "shelfLocation": "Rack CS-102",
+      "description": "Comprehensive update of the leading algorithms textbook, covering modern algorithms, data structures, dynamic programming, graph theory, and computational complexity.",
+      "publishedYear": 2009,
+      "coverUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80",
+      "createdAt": "2025-01-16T11:00:00.000Z"
+    },
+    {
+      "id": "bk_3",
+      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+      "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+      "isbn": "978-0201633610",
+      "category": "Software Engineering",
+      "quantity": 3,
+      "availableQuantity": 0,
+      "shelfLocation": "Rack SE-204",
+      "description": "Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems.",
+      "publishedYear": 1994,
+      "coverUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+      "createdAt": "2025-01-18T09:30:00.000Z"
+    },
+    {
+      "id": "bk_4",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "isbn": "978-0743273565",
+      "category": "Literature",
+      "quantity": 6,
+      "availableQuantity": 5,
+      "shelfLocation": "Rack LIT-301",
+      "description": "A classic portrayal of the Jazz Age, wealth, disillusionment, obsession, and the elusive nature of the American Dream in the 1920s.",
+      "publishedYear": 1925,
+      "coverUrl": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=600&auto=format&fit=crop&q=80",
+      "createdAt": "2025-02-01T08:00:00.000Z"
+    },
+    {
+      "id": "bk_5",
+      "title": "Database System Concepts (Silberschatz)",
+      "author": "Abraham Silberschatz, Henry F. Korth",
+      "isbn": "978-0078022159",
+      "category": "Computer Science",
+      "quantity": 4,
+      "availableQuantity": 3,
+      "shelfLocation": "Rack DB-401",
+      "description": "The definitive text on database systems, covering relational databases, SQL, normalization, indexing, transaction processing, and concurrency control.",
+      "publishedYear": 2019,
+      "coverUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&auto=format&fit=crop&q=80",
+      "createdAt": "2025-02-10T13:20:00.000Z"
+    },
+    {
+      "id": "bk_6",
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "isbn": "978-0062316097",
+      "category": "History",
+      "quantity": 5,
+      "availableQuantity": 4,
+      "shelfLocation": "Rack HIST-105",
+      "description": "Explores how an insignificant ape became the ruler of planet Earth, covering evolutionary biology, cognitive revolutions, agriculture, and money.",
+      "publishedYear": 2014,
+      "coverUrl": "https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=600&auto=format&fit=crop&q=80",
+      "createdAt": "2025-02-15T15:00:00.000Z"
+    },
+    {
+      "id": "bk_7",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "isbn": "978-0441172719",
+      "category": "Science Fiction",
+      "quantity": 4,
+      "availableQuantity": 4,
+      "shelfLocation": "Rack SCI-202",
+      "description": "Set on the desert planet Arrakis, Dune tells the story of Paul Atreides as he navigates political betrayal, ecology, and prophecy.",
+      "publishedYear": 1965,
+      "coverUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=600&auto=format&fit=crop&q=80",
+      "createdAt": "2025-02-20T10:40:00.000Z"
+    },
+    {
+      "id": "bk_8",
+      "title": "Linear Algebra and Its Applications",
+      "author": "Gilbert Strang",
+      "isbn": "978-0030105678",
+      "category": "Mathematics",
+      "quantity": 3,
+      "availableQuantity": 2,
+      "shelfLocation": "Rack MATH-108",
+      "description": "Renowned introduction to linear algebra, vector spaces, eigenvalues, singular value decomposition, and applied matrices.",
+      "publishedYear": 2016,
+      "coverUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&auto=format&fit=crop&q=80",
+      "createdAt": "2025-02-25T11:00:00.000Z"
+    }
+  ],
+  "issues": [
+    {
+      "id": "iss_1",
+      "bookId": "bk_1",
+      "userId": "usr_user_1",
+      "issueDate": "2026-08-23T03:56:43.203Z",
+      "dueDate": "2026-09-06T03:56:43.203Z",
+      "returnDate": null,
+      "status": "OVERDUE",
+      "calculatedFine": 35,
+      "finePaid": false
+    },
+    {
+      "id": "iss_2",
+      "bookId": "bk_2",
+      "userId": "usr_user_2",
+      "issueDate": "2026-09-08T03:56:43.203Z",
+      "dueDate": "2026-09-22T03:56:43.203Z",
+      "returnDate": null,
+      "status": "ISSUED",
+      "calculatedFine": 0,
+      "finePaid": false
+    },
+    {
+      "id": "iss_3",
+      "bookId": "bk_3",
+      "userId": "usr_user_1",
+      "issueDate": "2026-09-10T03:56:43.203Z",
+      "dueDate": "2026-09-24T03:56:43.203Z",
+      "returnDate": null,
+      "status": "ISSUED",
+      "calculatedFine": 0,
+      "finePaid": false
+    },
+    {
+      "id": "iss_4",
+      "bookId": "bk_3",
+      "userId": "usr_user_3",
+      "issueDate": "2026-08-28T03:56:43.203Z",
+      "dueDate": "2026-09-11T03:56:43.203Z",
+      "returnDate": null,
+      "status": "OVERDUE",
+      "calculatedFine": 10,
+      "finePaid": false
+    }
+  ],
+  "fines": [
+    {
+      "id": "fn_1",
+      "issueId": "iss_1",
+      "userId": "usr_user_1",
+      "bookId": "bk_1",
+      "amount": 35,
+      "daysOverdue": 7,
+      "status": "UNPAID",
+      "createdAt": "2026-09-06T03:56:43.203Z",
+      "paidAt": null
+    },
+    {
+      "id": "fn_2",
+      "issueId": "iss_historic",
+      "userId": "usr_user_2",
+      "bookId": "bk_4",
+      "amount": 15,
+      "daysOverdue": 3,
+      "status": "PAID",
+      "createdAt": "2026-08-13T03:56:43.203Z",
+      "paidAt": "2026-08-15T03:56:43.203Z"
+    },
+    {
+      "id": "fn_1789185403204_d9sd",
+      "issueId": "iss_4",
+      "userId": "usr_user_3",
+      "bookId": "bk_3",
+      "amount": 10,
+      "daysOverdue": 2,
+      "status": "UNPAID",
+      "createdAt": "2026-09-12T03:56:43.204Z"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "res_1",
+      "bookId": "bk_3",
+      "userId": "usr_user_2",
+      "reservationDate": "2026-09-11T03:56:43.203Z",
+      "status": "PENDING",
+      "queuePosition": 1
+    }
+  ],
+  "queries": [
+    {
+      "id": "qry_1",
+      "userId": "usr_user_1",
+      "userName": "Rohit Sharma",
+      "userEmail": "rohit@example.com",
+      "subject": "Request for \"Designing Data-Intensive Applications\"",
+      "category": "Book Request",
+      "message": "Could the library please consider acquiring Martin Kleppmann's \"Designing Data-Intensive Applications\" (O'Reilly)? Multiple students in CS require it.",
+      "status": "PENDING",
+      "adminReply": null,
+      "repliedAt": null,
+      "createdAt": "2026-09-09T03:56:43.203Z"
+    },
+    {
+      "id": "qry_2",
+      "userId": "usr_user_2",
+      "userName": "Priya Nair",
+      "userEmail": "priya@example.com",
+      "subject": "Weekend Study Room Timings",
+      "category": "General",
+      "message": "Are the reading rooms and Wi-Fi facilities open on Sunday evenings during semester finals?",
+      "status": "RESOLVED",
+      "adminReply": "Yes Priya! The digital reading room remains accessible until 9:00 PM on all weekends during final exams.",
+      "repliedAt": "2026-09-11T03:56:43.203Z",
+      "createdAt": "2026-09-07T03:56:43.203Z"
+    }
+  ]
+}
