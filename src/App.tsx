@@ -40,6 +40,7 @@ import { ReservationsList } from './components/ReservationsList';
 import { QueriesDesk } from './components/QueriesDesk';
 import { DatabaseSchemaViewer } from './components/DatabaseSchemaViewer';
 import { AuthModal } from './components/AuthModal';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   // Current user state (persisted in localStorage for convenience)
@@ -843,6 +844,9 @@ export default function App() {
         }}
         onSave={handleSaveBook}
       />
+      
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
